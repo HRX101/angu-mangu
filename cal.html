@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body>
+    <div ng-app="" ng-init="name='anonymas'">
+        <h1>Welcome {{name}}</h1>
+      <p>Enter your name :<input type="text" ng-model="name"/></p>  
+     <p>enter your value  <input type="number" ng-model="val1"/>
+    {{val1}}
+    </p> 
+    <p>enter your value  <input type="number" ng-model="val2"/>
+        {{val2}}
+        </p> 
+        <p>the sum is {{val1+val2}}</p> 
+        <p>the subtraction is {{val1-val2}}</p> 
+        <p>the multiplication is {{val1*val2}}</p> 
+        <p>the division is {{val1/val2}}</p> 
+       male ? <input type="radio" ng-model="sex"  value="male"/>
+       female ? <input type="radio" ng-model="sex" value="female"/>
+       <div ng-switch="sex">
+       <div ng-switch-when="male">
+           good boy you are
+       </div>
+       <div ng-switch-when="female">
+           impressive woman 
+       </div>
+    </div>
+    <h1 ng-mousemove="show=false">You wanna know something ?</h1>
+    <h1 ng-mousemove="show=true">just over your mouse on me</h1>
+    <div ng-show="show" ng-mousemove="show1=true">this site is made in angular js</div>
+    <div ng-show="show1">wow you did it!</div>
+    <style>
+        .ng-show{
+            color:red;
+        }
+    </style>
+
+    </div>
+</body>
+</html>
